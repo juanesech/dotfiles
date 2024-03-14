@@ -1,0 +1,21 @@
+return {
+  {
+    require("neoconf").setup(),
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },
+  {
+    require("mason").setup(),
+    require("mason-lspconfig").setup(),
+    require("lspconfig").yamlls.setup({
+      settings = {
+        yaml = {
+          schemas = {
+            ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*.gitlab-ci.yml",
+          },
+        },
+      },
+    }),
+  },
+}

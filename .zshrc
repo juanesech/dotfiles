@@ -4,7 +4,7 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 
 # Oh my posh theme
-eval "$(oh-my-posh init zsh --config ~/dotfiles/.mytheme.omp.toml)"
+eval "$(oh-my-posh init zsh --config ~/.mytheme.omp.toml)"
 
 # Set zinit home
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"

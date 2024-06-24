@@ -22,7 +22,7 @@ console_title_template = '{{if .Root}} ⚡ {{end}}{{.Folder | replace "~" "🏠"
     style = 'diamond'
     foreground = '#FFFFFF'
     background = '#DE2121'
-    leading_diamond = '<transparent,#DE2121></>'
+    leading_diamond = ''
     trailing_diamond = ''
     template = '  '
 
@@ -55,7 +55,11 @@ console_title_template = '{{if .Root}} ⚡ {{end}}{{.Folder | replace "~" "🏠"
       fetch_status = true
       fetch_upstream_icon = true
 
-  [[blocks.segments]]
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+[[blocks.segments]]
     type = 'time'
     style = 'diamond'
     foreground = '#FFFFFF'

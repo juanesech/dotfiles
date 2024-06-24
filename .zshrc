@@ -1,3 +1,11 @@
+# prompt config
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+
+# Oh my posh theme
+eval "$(oh-my-posh init zsh --config ~/dotfiles/.mytheme.omp.toml)"
+
 # Set zinit home
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -27,6 +35,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias zshconfig="nvim ~/.zshrc"
+alias shreload="source ~/.zshrc"
 alias ls="ls --color"
 
 # History settings
